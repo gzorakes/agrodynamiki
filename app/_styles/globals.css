@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-astronaut-50: #f0f5fd;
+  --color-astronaut-100: #e3edfc;
+  --color-astronaut-200: #ccdcf9;
+  --color-astronaut-300: #aec5f3;
+  --color-astronaut-400: #8da5ec;
+  --color-astronaut-500: #7185e3;
+  --color-astronaut-600: #5662d5;
+  --color-astronaut-700: #4751bb;
+  --color-astronaut-800: #3b4398;
+  --color-astronaut-900: #31386d;
+  --color-astronaut-950: #202446;
+}

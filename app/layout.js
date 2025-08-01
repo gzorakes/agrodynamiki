@@ -1,5 +1,20 @@
+import "@/app/_styles/globals.css";
+import Navigation from "./_components/Navigation";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <Navigation />
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+
+/*
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@/app/_styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,3 +42,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+*/
