@@ -14,4 +14,19 @@
   --color-primary-950: #141c24;
 
   --color-accent-500: #78c982;
+
+  --color-custom-bg1: #9d9a7b;
+  --color-custom-bg2: #9d9260;
+  --color-custom-bg3: #817f54;
+  --color-custom-bg4: #535f3b;
+  --color-custom-bg5: #434837;
+
+  --color-custom-white: #dbd7d6;
+
+  --color-custom-light: #d3b087;
+  --color-custom-orange: #de8430;
+
+  --color-accent-100: #a9b77d;
+  --color-accent-200: #839958;
+  --color-accent-300: #6d8247;
 }
