@@ -10,24 +10,18 @@ export default function Page() {
         fill
         placeholder="blur"
         quality={80}
-        className="object-cover object-top"
+        className="object-cover"
         alt="Mountains and forests with two cabins"
       />
 
-      <div className="relative z-10 text-center  md:mt-[-20]">
-        <h1 className="sm:text-6xl text-3xl  text-primary-100 mb-1 tracking-tight font-normal">
-          <span className="text-accent-500">ΑΓΡΟ</span>
+      <div className="relative z-10 text-center md:mt-[-20]">
+        <h1 className="text-6xl lg:block text-custom-white mb-1 tracking-wide font-normal hidden">
+          <span className="text-accent-300">ΑΓΡΟ</span>
           ΔΥΝΑΜΙΚΗ
         </h1>
-        <h2 className="sm:text-2xl text-primary-100">
+        <h2 className="text-2xl text-custom-white hidden lg:block">
           Ανδρουλάκης Ελευθέριος & ΣΙΑ Ο.Ε.
         </h2>
-        {/* <Link
-          href="/cabins"
-          className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
-        >
-          Explore luxury cabins
-        </Link> */}
       </div>
     </main>
   );

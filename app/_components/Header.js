@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <header className="border-b border-primary-900 px-8 py-5 z-20 bg-custom-bg1 text-stone-700 font-semibold ">
-      <div className="flex justify-between max-w-7xl mx-auto items-center container">
+      <div className="flex justify-between max-w-7xl mx-auto lg:items-center container">
         <Link href="/">
           <Image className="min-w-[200px]" src={logo} alt="Agrodynamiki logo" />
         </Link>
