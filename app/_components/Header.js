@@ -14,7 +14,7 @@ function Header() {
   }
 
   return (
-    <header className="relative px-8 py-5 z-20 bg-main-700 text-main-100 font-semibold">
+    <header className="relative px-8 py-5 z-30 bg-main-700 text-main-100 font-semibold">
       <div className="flex justify-between max-w-7xl mx-auto lg:items-center container">
         <Link href="/" aria-label="Home">
           <Image className="w-60" src={logo} alt="Agrodynamiki logo" />
@@ -78,7 +78,7 @@ function Header() {
             <li>
               <Link
                 href="/services"
-                className="hover:text-stone-300"
+                className="hover:text-main-200"
                 onClick={() => setMenuOpen(false)}
               >
                 Υπηρεσίες
@@ -87,7 +87,7 @@ function Header() {
             <li>
               <Link
                 href="/products"
-                className="hover:text-stone-300"
+                className="hover:text-main-200"
                 onClick={() => setMenuOpen(false)}
               >
                 Προϊόντα
@@ -96,7 +96,7 @@ function Header() {
             <li>
               <Link
                 href="/about"
-                className="hover:text-stone-300"
+                className="hover:text-main-200"
                 onClick={() => setMenuOpen(false)}
               >
                 Αγροδυναμική
@@ -105,7 +105,7 @@ function Header() {
             <li>
               <Link
                 href="/contact"
-                className="hover:text-stone-300"
+                className="hover:text-main-200"
                 onClick={() => setMenuOpen(false)}
               >
                 Επικοινωνία

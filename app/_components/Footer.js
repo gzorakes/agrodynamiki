@@ -36,7 +36,7 @@ function Footer() {
               <li className="flex gap-3 items-center">
                 <FaLocationDot className="text-main-200" />
                 <div>
-                  <p>Χερσόνησος, Ηράκλειο Κρητης</p>
+                  <p>Χερσόνησος, Ηράκλειο Κρήτης</p>
                   <p>500μ από τη διακλάδωση Λασιθίου</p>
                 </div>
               </li>
