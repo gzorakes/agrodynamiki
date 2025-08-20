@@ -10,72 +10,104 @@ function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   function handleMenu() {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen((v) => !v);
   }
 
   return (
-    <header className="border-b border-primary-900 px-8 py-5 z-20 bg-custom-bg1 text-stone-700 font-semibold ">
+    <header className="relative px-8 py-5 z-20 bg-main-700 text-main-100 font-semibold">
       <div className="flex justify-between max-w-7xl mx-auto lg:items-center container">
-        <Link href="/">
-          <Image className="min-w-[200px]" src={logo} alt="Agrodynamiki logo" />
+        <Link href="/" aria-label="Home">
+          <Image className="w-60" src={logo} alt="Agrodynamiki logo" />
         </Link>
+
+        {/* Desktop nav */}
         <nav className="z-10 text-xl">
           <ul className="lg:flex hidden gap-8 lg:gap-16 items-center">
             <li>
-              <Link href="/services" className="hover:text-stone-500">
+              <Link href="/services" className="hover:text-main-200">
                 Υπηρεσίες
               </Link>
             </li>
             <li>
-              <Link href="/products" className="hover:text-stone-500">
+              <Link href="/products" className="hover:text-main-200">
                 Προϊόντα
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-stone-500">
+              <Link href="/about" className="hover:text-main-200">
                 Αγροδυναμική
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-stone-500">
+              <Link href="/contact" className="hover:text-main-200">
                 Επικοινωνία
               </Link>
             </li>
           </ul>
         </nav>
-        {/* Small screen */}
-        <div className="lg:hidden cursor-pointer">
-          {isMenuOpen ? (
-            <HiX size={30} onClick={handleMenu} />
-          ) : (
-            <HiMenu size={30} onClick={handleMenu} />
-          )}
-        </div>
+
+        {/* Hamburger */}
+        <button
+          type="button"
+          className="lg:hidden cursor-pointer"
+          onClick={handleMenu}
+          aria-label={isMenuOpen ? "Κλείσιμο μενού" : "Άνοιγμα μενού"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+        >
+          {isMenuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
+        </button>
       </div>
 
-      <nav className="z-10 text-xl lg:hidden">
+      {/* Backdrop that covers page content (doesn't push layout) */}
+      <div
+        onClick={handleMenu}
+        className={`fixed inset-0 bg-black/40 lg:hidden transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
+      {/* Mobile menu panel: absolutely positioned under the header, not in flow */}
+      <nav id="mobile-menu" className="lg:hidden" aria-hidden={!isMenuOpen}>
         <div
-          className={`overflow-hidden transition-[max-height] duration-500  [will-change:max-height]
-      ${isMenuOpen ? "max-h-96" : "max-h-0"}`}
+          className={`absolute left-0 right-0 top-full bg-main-700 z-30 shadow-lg
+          transition-all duration-300 origin-top
+          ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
-          <ul className="flex flex-col gap-8 mt-8 text-center">
+          <ul className="flex flex-col gap-8 py-8 px-8 text-center text-xl">
             <li>
-              <Link href="/services" className="hover:text-stone-500">
+              <Link
+                href="/services"
+                className="hover:text-stone-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Υπηρεσίες
               </Link>
             </li>
             <li>
-              <Link href="/products" className="hover:text-stone-500">
+              <Link
+                href="/products"
+                className="hover:text-stone-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Προϊόντα
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-stone-500">
+              <Link
+                href="/about"
+                className="hover:text-stone-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Αγροδυναμική
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-stone-500">
+              <Link
+                href="/contact"
+                className="hover:text-stone-300"
+                onClick={() => setMenuOpen(false)}
+              >
                 Επικοινωνία
               </Link>
             </li>

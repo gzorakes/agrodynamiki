@@ -1,10 +1,11 @@
 import "@/app/_styles/globals.css";
 import Header from "@/app/_components/Header";
 
-import { Josefin_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
+import Footer from "./_components/Footer";
 
-const josefin = Josefin_Sans({
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ["latin", "greek"],
   display: "swap",
 });
 
@@ -17,15 +18,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="el">
       <body
-        className={`${josefin.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
+        className={`${inter.className} antialiased bg-main-100 text-primary-100 min-h-screen flex flex-col`}
       >
         <Header />
 
         <div className="flex-1 px-8 py-12">
           <main className="max-w-7xl mx-auto">{children}</main>
         </div>
+
+        <Footer />
       </body>
     </html>
   );
