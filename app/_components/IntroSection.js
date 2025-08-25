@@ -3,7 +3,7 @@ import katastima from "@/public/katastima.jpg";
 
 function IntroSection() {
   return (
-    <div className="mt-24 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+    <div className="mt-24 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center max-w-7xl mx-auto">
       <Image
         src={katastima}
         placeholder="blur"

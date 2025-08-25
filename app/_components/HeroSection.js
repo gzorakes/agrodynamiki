@@ -3,7 +3,7 @@ import bg2 from "@/public/bg2.jpg";
 
 function HeroSection() {
   return (
-    <div className="relative left-1/2 right-1/2 -mx-[50vw] -my-12 w-screen h-[300px] lg:h-[500px]">
+    <div className="relative -mx-6 -my-12 h-[300px] lg:h-[500px]">
       <Image
         src={bg2}
         fill
