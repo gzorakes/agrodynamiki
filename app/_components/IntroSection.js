@@ -8,7 +8,7 @@ function IntroSection() {
         src={katastima}
         placeholder="blur"
         quality={80}
-        className="w-[400px] lg:w-[500px] rounded-[60px]"
+        className="w-[400px] lg:w-[500px] rounded-xl"
         alt="Mountains and forests"
       />
       <div className="flex flex-col gap-5 text-main-700">
