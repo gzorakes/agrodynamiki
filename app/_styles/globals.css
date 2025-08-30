@@ -1,34 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  /* --color-primary-50: #e1e8ef;
-  --color-primary-100: #d4dee7;
-  --color-primary-200: #b7c7d7;
-  --color-primary-300: #99b0c7;
-  --color-primary-400: #7c99b6;
-  --color-primary-500: #5e82a6;
-  --color-primary-600: #4c6b8a;
-  --color-primary-700: #3c546c;
-  --color-primary-800: #2c3d4f;
-  --color-primary-900: #1b2631;
-  --color-primary-950: #141c24; */
-
-  /* --color-accent-100: #a9b77d;
-  --color-accent-200: #839958;
-  --color-accent-300: #6d8247;
-  --color-accent-500: #78c982;
-
-  --color-custom-bg1: #9d9a7b;
-  --color-custom-bg2: #9d9260;
-  --color-custom-bg3: #817f54;
-  --color-custom-bg4: #535f3b;
-  --color-custom-bg5: #434837; */
-
-  /* --color-main-100: #2f5249;
-  --color-main-200: #437057;
-  --color-main-300: #97b067;
-  --color-main-400: #e3de61; */
-
   --color-main-100: #2a2a2a;
   --color-main-200: #425b0c;
   --color-main-300: #2e4604;
@@ -41,7 +13,21 @@
 
   --color-custom-white: #dbd7d6;
   --color-custom-black: #1a1a19;
+}
 
-  /* --color-custom-light: #d3b087;
-  --color-custom-orange: #de8430; */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 20px));
+  }
+}
+
+@utility animate-infinite-scroll {
+  animation: infinite-scroll 40s linear infinite;
+}
+
+@utility infinite-scroll-paused {
+  animation-play-state: paused;
 }

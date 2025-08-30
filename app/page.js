@@ -1,6 +1,7 @@
 import ContactButton from "./_components/ContactButton";
 import HeroSection from "./_components/HeroSection";
 import IntroSection from "./_components/IntroSection";
+import ProductsSection from "./_components/ProductsSection";
 import ServicesSection from "./_components/ServicesSection";
 import StihlSection from "./_components/StihlSection";
 
@@ -12,6 +13,7 @@ export default function Page() {
       <StihlSection />
       <ServicesSection />
       <ContactButton />
+      <ProductsSection />
     </main>
   );
 }
